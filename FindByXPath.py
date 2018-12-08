@@ -1,7 +1,7 @@
 from selenium import webdriver
 import os
 
-class FindByIdName():
+class FindByXpath():
 
     def test(self):
         driver_location = 'C:\\Users\\BlazejW\\selenium\\chromedriver.exe'
@@ -16,5 +16,5 @@ class FindByIdName():
             print("Element has been found by Xpath and CSS")
 
 
-chrome_aut = FindByIdName()
+chrome_aut = FindByXpath()
 chrome_aut.test()
