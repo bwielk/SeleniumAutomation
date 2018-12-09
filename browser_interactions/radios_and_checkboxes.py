@@ -10,9 +10,9 @@ class RadiosAndCheckboxes():
 
     def _check_statues_of_checkboxes_and_radios(self, array_of_elements):
         self.is_selected_checker_counter += 1
-        print("CHECKING SESSION NUMBER %s" % self.is_selected_checker_counter)
+        print("\n\nCHECKING SESSION NUMBER %s" % self.is_selected_checker_counter)
         for element in array_of_elements:
-            print("%s is selected => %s" % (element.id, element.is_selected()))
+            print("%s is selected => %s" % (element.get_attribute("id"), element.is_selected()))
 
     def test(self):
         driver_location = 'C:\\Users\\BlazejW\\selenium\\chromedriver.exe'
