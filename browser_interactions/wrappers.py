@@ -23,9 +23,11 @@ class Wrappers():
         text_field_2.clear()
         text_field_2.send_keys('Ich koche gern')
         time.sleep(4)
-        text_field_3 = wrapper.get_element('text-field', 'class') #should throw exception
-        print(text_field_3)
+        #text_field_3 = wrapper.get_element('text-field', 'class') #should throw exception
+        #print(text_field_3)
         time.sleep(3)
+        print('Element with id "name" exsits => ' + str(wrapper.is_element_present('name', By.ID)))
+        print('Element with id "names" exists => ' + str(wrapper.element_presence_check('names', By.ID)))
 
 class HandyWrappers():
 
@@ -51,6 +53,28 @@ class HandyWrappers():
         except NoSuchElementException:
             print('Element not found')
         return element
+
+    def is_element_present(self, locator, by_type='id'):
+        try:
+            element = self.driver.find_element(by_type, locator)
+            if element is not None:
+                print("Element found")
+                return True
+            else:
+                return False
+        except:
+            print('Element not found')
+            return False
+
+    def element_presence_check(self, locator, by_type):
+        try:
+            elements_list = self.driver.find_elements(by_type, locator)
+            if len(elements_list) > 0:
+                return True
+            else:
+                return False
+        except:
+            return False
 
 chrome_aut = Wrappers()
 chrome_aut.test()
