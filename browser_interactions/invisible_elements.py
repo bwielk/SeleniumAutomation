@@ -1,7 +1,5 @@
 from selenium import webdriver
 import os
-from time import sleep
-from selenium.webdriver.support.select import Select
 
 class InvisibleElements():
 
