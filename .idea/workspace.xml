@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2be9daad-a34f-452a-9f91-060caeeaa87d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/browser_interactions/dynamic_xpath.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser_interactions/waits.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,32 +15,32 @@
     <session id="-1591341874">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="24" />
+          <entry key="py" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="24" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="84" />
-          <entry key="py" value="8472" />
+          <entry key="py" value="8999" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="84" />
-          <entry key="Python" value="8472" />
+          <entry key="Python" value="8999" />
         </counts>
       </usages-collector>
     </session>
@@ -48,23 +48,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/browser_interactions/basic_interactions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <marker date="1544313153197" expanded="true" signature="93:94" ph="..." />
-                <marker date="1544313153197" expanded="true" signature="93:99" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/browser_interactions/list_of_elements.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="51">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -76,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/browser_interactions/select_dropdown_interaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="204">
               <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -109,12 +95,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/browser_interactions/dynamic_xpath.py">
+        <entry file="file://$PROJECT_DIR$/browser_interactions/waits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/browser_interactions/wrappers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
+            <state relative-caret-position="35">
               <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -135,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/browser_interactions/click_and_send_keys_interactions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="60" />
+            <state relative-caret-position="225">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="60" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -147,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finding_elements/find_by_xpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="61" />
+            <state relative-caret-position="153">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -156,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finding_elements/find_by_id_name.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="85">
               <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="74" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -207,6 +193,7 @@
         <option value="$PROJECT_DIR$/browser_interactions/extra_props.py" />
         <option value="$PROJECT_DIR$/browser_interactions/wrappers.py" />
         <option value="$PROJECT_DIR$/browser_interactions/dynamic_xpath.py" />
+        <option value="$PROJECT_DIR$/browser_interactions/waits.py" />
       </list>
     </option>
   </component>
@@ -222,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,7 +231,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,13 +238,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\BlazejW\PycharmProjects\automation\finding_elements" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\BlazejW\PycharmProjects\automation\browser_interactions" />
       <recent name="C:\Users\BlazejW\PycharmProjects\automation\finding_elements" />
       <recent name="C:\Users\BlazejW\PycharmProjects\automation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BlazejW\PycharmProjects\automation\finding_elements" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dynamic_xpath">
+  <component name="RunManager" selected="Python.waits">
     <configuration name="dynamic_xpath" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -336,7 +323,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="select_dropdown_interaction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="waits" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -348,7 +335,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/browser_interactions/select_dropdown_interaction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/browser_interactions/waits.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,19 +366,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.select_dropdown_interaction" />
       <item itemvalue="Python.invisible_elements" />
       <item itemvalue="Python.getting_text" />
       <item itemvalue="Python.wrappers" />
       <item itemvalue="Python.dynamic_xpath" />
+      <item itemvalue="Python.waits" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.waits" />
         <item itemvalue="Python.dynamic_xpath" />
         <item itemvalue="Python.wrappers" />
         <item itemvalue="Python.getting_text" />
         <item itemvalue="Python.invisible_elements" />
-        <item itemvalue="Python.select_dropdown_interaction" />
       </list>
     </recent_temporary>
   </component>
@@ -467,38 +454,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finding_elements/FindByCSSSelectors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/finding_elements/FindByCSSSelectors.py" />
     <entry file="file://$PROJECT_DIR$/finding_elements/run_chrome_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="47" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finding_elements/find_by_id_name.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1544049214512" expanded="true" signature="63:64" ph="..." />
-            <marker date="1544049214512" expanded="true" signature="63:69" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,11 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <marker date="1544314517837" expanded="true" signature="183:188" ph="..." />
-            <marker date="1544314517837" expanded="true" signature="183:302" ph="..." />
-            <marker date="1544314517837" expanded="true" signature="317:326" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,9 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -528,40 +483,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="74" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1544905323688" expanded="true" signature="1011:1139" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/browser_interactions/radios_and_checkboxes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finding_elements/find_by_xpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/browser_interactions/click_and_send_keys_interactions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/browser_interactions/basic_interactions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="255">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -573,7 +500,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/browser_interactions/list_of_elements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="51">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -583,7 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/browser_interactions/select_dropdown_interaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="204">
           <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -591,10 +518,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/browser_interactions/wrappers.py">
+    <entry file="file://$PROJECT_DIR$/browser_interactions/radios_and_checkboxes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="238">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding_elements/find_by_id_name.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1544049214512" expanded="true" signature="63:64" ph="..." />
+            <marker date="1544049214512" expanded="true" signature="63:69" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser_interactions/dynamic_xpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="50" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -613,12 +559,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/browser_interactions/dynamic_xpath.py">
+    <entry file="file://$PROJECT_DIR$/browser_interactions/wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        <state relative-caret-position="35">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser_interactions/click_and_send_keys_interactions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding_elements/find_by_xpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser_interactions/waits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
