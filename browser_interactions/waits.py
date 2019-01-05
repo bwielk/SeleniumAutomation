@@ -31,25 +31,46 @@ class Waits():
     def explicit_wait(self):
         driver = self._prepare_driver('https://www.airbnb.co.uk/')
         driver.maximize_window()
-        driver.implicitly_wait(5)
-        destination_input = driver.find_element(By.XPATH, '//*[@id="Koan-guided-search-location__input"]')
-        destination_input.send_keys('Warsaw')
-        time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/button/div')
-        time_and_date.click()
-        particular_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[1]/div/div/div[2]/div[2]/div/div[2]/div/table/tbody/tr[2]/td[6]')
-        particular_date.click()
-        apply_time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[2]/span/button')
-        apply_time_and_date.click()
-        guests_number = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/button')
-        guests_number.click()
-        add_an_adult_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
-        add_an_adult_button.click()
-        add_an_adult_button.click()
-        search_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[2]/button')
-        search_button.click()
-        sleep(60)
 
+        magic_carpet_search_bar = None
 
+        try:
+            magic_carpet_search_bar = driver.find_element(By.ID, 'MagicCarpetSearchBar')
+        except NoSuchElementException:
+            print('Element not found')
+
+        if magic_carpet_search_bar is None:
+
+            driver.implicitly_wait(5)
+
+            destination_input = driver.find_element(By.XPATH, '//*[@id="Koan-guided-search-location__input"]')
+            time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/button/div')
+
+            destination_input.send_keys('Warsaw')
+            time_and_date.click()
+
+            particular_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/\
+                            div/div/div[1]/div/div/div[2]/div[2]/div/div[2]/div/table/tbody/tr[2]/td[6]')
+            particular_date.click()
+
+            apply_time_and_date = driver.find_element(By.XPATH,
+                                                      '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[2]/span/button')
+            apply_time_and_date.click()
+
+            guests_number = driver.find_element(By.XPATH,
+                                                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/button')
+            guests_number.click()
+
+            add_an_adult_button = driver.find_element(By.XPATH,
+                                                      '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
+
+            add_an_adult_button.click()
+            add_an_adult_button.click()
+            search_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[2]/button')
+            search_button.click()
+            sleep(60)
+        else:
+            driver.close()
 
 chrome_aut = Waits()
 #chrome_aut.implicit_waits()
