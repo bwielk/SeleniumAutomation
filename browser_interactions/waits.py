@@ -37,7 +37,7 @@ class Waits():
         try:
             magic_carpet_search_bar = driver.find_element(By.ID, 'MagicCarpetSearchBar')
         except NoSuchElementException:
-            print('Element not found')
+            print('Magic Carpet Search bar element not found. Scenario continues')
 
         if magic_carpet_search_bar is None:
 
@@ -65,11 +65,30 @@ class Waits():
                                                       '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
 
             add_an_adult_button.click()
+            sleep(2)
             add_an_adult_button.click()
+            sleep(2)
             search_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[2]/button')
             search_button.click()
-            sleep(60)
+            sleep(5)
+
+            search_results_filters = None
+            try:
+                search_results_filters = driver.find_element(By.XPATH, '//*[@id="site-content"]/div/div[2]/div/div')
+            except NoSuchElementException:
+                print('Search results filters not found')
+
+            if not search_results_filters is None and search_results_filters.is_displayed():
+                sleep(2)
+                print('Success')
+                driver.back()
+                sleep(2)
+                driver.close()
+            else:
+                print('Failure')
+                driver.close()
         else:
+            print('The proper UI version has not been opened by the browser')
             driver.close()
 
 chrome_aut = Waits()
