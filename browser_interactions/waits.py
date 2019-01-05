@@ -31,7 +31,10 @@ class Waits():
     def explicit_wait(self):
         driver = self._prepare_driver('https://www.airbnb.co.uk/')
         driver.maximize_window()
-
+        wait = WebDriverWait(driver, 5, poll_frequency=1,
+                             ignored_exceptions=[NoSuchElementException,
+                                                 ElementNotVisibleException,
+                                                 ElementNotSelectableException])
         magic_carpet_search_bar = None
 
         try:
@@ -40,29 +43,33 @@ class Waits():
             print('Magic Carpet Search bar element not found. Scenario continues')
 
         if magic_carpet_search_bar is None:
-
             driver.implicitly_wait(5)
 
-            destination_input = driver.find_element(By.XPATH, '//*[@id="Koan-guided-search-location__input"]')
-            time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/button/div')
-
+            destination_input = driver.find_element(By.XPATH,
+                '//*[@id="Koan-guided-search-location__input"]')
+            time_and_date = driver.find_element(By.XPATH,
+                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]\
+                /div/div/div[2]/button/div')
             destination_input.send_keys('Warsaw')
             time_and_date.click()
 
-            particular_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/\
-                            div/div/div[1]/div/div/div[2]/div[2]/div/div[2]/div/table/tbody/tr[2]/td[6]')
+            particular_date = driver.find_element(By.XPATH,
+                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]\
+                /div/div[1]/div[2]/div/div/div/div/div/div[1]/div/div/div[2]/div[2]/div\
+                /div[2]/div/table/tbody/tr[2]/td[6]')
             particular_date.click()
-
             apply_time_and_date = driver.find_element(By.XPATH,
-                                                      '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[2]/span/button')
+                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]\
+                /div/div[1]/div[2]/div/div/div/div/div/div[2]/span/button')
             apply_time_and_date.click()
 
             guests_number = driver.find_element(By.XPATH,
-                                                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/button')
+                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]\
+                /div/div/div[2]/div/button')
             guests_number.click()
-
             add_an_adult_button = driver.find_element(By.XPATH,
-                                                      '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
+                '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]\
+                /div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
 
             add_an_adult_button.click()
             sleep(2)
@@ -72,13 +79,29 @@ class Waits():
             search_button.click()
             sleep(5)
 
-            search_results_filters = None
+            homes_button = None
+            search_results = None
+
             try:
-                search_results_filters = driver.find_element(By.XPATH, '//*[@id="site-content"]/div/div[2]/div/div')
-            except NoSuchElementException:
+                homes_button = wait.until(EC.visibility_of_element_located((By.XPATH,
+                    '//*[@id="site-content"]/div/div[4]/div/div/div/div/div[1]/div/div[2]/div/div/div/div[1]/div/div/a')))
+                sleep(2)
+                homes_button.click()
+                sleep(10)
+                print(homes_button)
+            except (NoSuchElementException, TimeoutException):
+                print(type(homes_button))
+                print('Homes button not found')
+
+            try:
+                search_results = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, '_8ssblpx')))
+                print(search_results)
+            except (NoSuchElementException, TimeoutException):
+                print(type(search_results))
                 print('Search results filters not found')
 
-            if not search_results_filters is None and search_results_filters.is_displayed():
+
+            if not search_results is None and search_results.is_displayed():
                 sleep(2)
                 print('Success')
                 driver.back()
@@ -93,4 +116,5 @@ class Waits():
 
 chrome_aut = Waits()
 #chrome_aut.implicit_waits()
-chrome_aut.explicit_wait()
+for i in range(10):
+    chrome_aut.explicit_wait()
