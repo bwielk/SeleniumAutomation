@@ -1,6 +1,9 @@
 from selenium import webdriver
 import os
 from time import sleep
+
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
@@ -26,17 +29,26 @@ class Waits():
         user_email_input.send_keys('test')
 
     def explicit_wait(self):
-        driver = self._prepare_driver('https://www.expedia.com')
-        driver.find_element_by_id('package-origin-hp-package').send_keys("Warsaw")
-        driver.find_element_by_id('package-destination-hp-package').send_keys("New York")
-        driver.find_element_by_id('package-departing-hp-package').send_keys("24/12/2018")
-        driver.find_element_by_id('package-returning-hp-package').clear()
-        driver.find_element_by_id('package-returning-hp-package').send_keys("31/12/2018")
-        driver.find_element_by_id('search-button-hp-package').click()
+        driver = self._prepare_driver('https://www.airbnb.co.uk/')
+        driver.maximize_window()
+        driver.implicitly_wait(5)
+        destination_input = driver.find_element(By.XPATH, '//*[@id="Koan-guided-search-location__input"]')
+        destination_input.send_keys('Warsaw')
+        time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/button/div')
+        time_and_date.click()
+        particular_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[1]/div/div/div[2]/div[2]/div/div[2]/div/table/tbody/tr[2]/td[6]')
+        particular_date.click()
+        apply_time_and_date = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/div[2]/span/button')
+        apply_time_and_date.click()
+        guests_number = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/button')
+        guests_number.click()
+        add_an_adult_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/button')
+        add_an_adult_button.click()
+        add_an_adult_button.click()
+        search_button = driver.find_element(By.XPATH, '//*[@id="guided-search-location"]/div/div[2]/div/div/div[2]/button')
+        search_button.click()
+        sleep(60)
 
-        driver.find_element_by_xpath('//*[@id="sortContainer"]/div/button').click()
-        sleep(8)
-        driver.quit()
 
 
 chrome_aut = Waits()
